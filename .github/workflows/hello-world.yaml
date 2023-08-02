@@ -11,12 +11,19 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
     steps:
     - name: branch checkout action
       uses: actions/checkout@v2
     
     - name: run linux command
       run: echo "hi test...."
+      shell: bash
+      
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check sequential job
+      run: echo "this is sequential job"
+      shell: bash
+  
