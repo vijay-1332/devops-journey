@@ -372,8 +372,10 @@ const userNavigation = [
 
 const sidebarOpen = ref(false)
 function handleCallDetaileDeleteAction(id) {
+  console.log('### handleCallDetaileDeleteAction()')
   callId.value = id
   isShowConfirmationDialog.value = true
+  
 }
 function handleDeleteAction() {
   callsStore.delete_calls(callId.value)
